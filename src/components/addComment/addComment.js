@@ -38,8 +38,8 @@ class AddComment extends Component {
     return (
       <section className="add-comment">
         <form name="add-comment-form" onSubmit={this.handleSubmitNewComment}>
-          <input type="text" name="comment_owner" onChange={this.handleChange} Placeholder="What's your name?" />
-          <textarea name="comment_desc" onChange={this.handleChange} placeholder="Comment Description" />
+          <input type="text" name="comment_owner" onChange={this.handleChange} required="Required" Placeholder="What's your name?" />
+          <textarea name="comment_desc" onChange={this.handleChange} required="Required" placeholder="Comment Description" />
           <button type="submit">Submit</button>
           <button type="button" onClick={handleCancelComment}>Cancel</button>
         </form>

@@ -38,10 +38,10 @@ class AddTopic extends Component {
     return (
       <section className="adding-topic">
         <form className="add-topic-form" onSubmit={this.handleSubmitNewTopic}>
-          <input type="text" name="title" placeholder="Enter subject" onChange={this.handleChange} />
-          <input type="text" name="topic_owner" placeholder="What's your name?" onChange={this.handleChange} />
-          <input type="text" name="rpg_system" placeholder="Enter system e.g. Pathfinder" onChange={this.handleChange} />
-          <textarea name="topic_desc" onChange={this.handleChange} placeholder="Description" />
+          <input type="text" name="title" placeholder="Enter subject" onChange={this.handleChange} required="Required" />
+          <input type="text" name="topic_owner" placeholder="What's your name?" onChange={this.handleChange} required="Required" />
+          <input type="text" name="rpg_system" placeholder="Enter system e.g. Pathfinder" onChange={this.handleChange} required="Required" />
+          <textarea name="topic_desc" onChange={this.handleChange} placeholder="Description" required="Required" />
           <button type="submit">Create New Topic</button>
           <button type="button" onClick={goBack}>Go Back</button>
         </form>

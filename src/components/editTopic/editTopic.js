@@ -26,6 +26,13 @@ class EditTopic extends Component {
     const { title, rpg_system, topic_desc } = this.state;
     const { topicId, cancelEdit } = this.props;
     event.preventDefault();
+    if ( !title && !rpg_system && !topic_desc ) {
+      return (
+        <div className="error">
+          <p>Must edit at least one variable!</p>
+        </div>
+      )
+    } else {
     cancelEdit();
     ApiService.editTopic(topicId, title, topic_desc, rpg_system)
       .then(this.context.setTopicContent({
@@ -37,7 +44,8 @@ class EditTopic extends Component {
       .catch(error => {
         debugger;
         this.context.setError(error)})
-  };
+  }
+};
 
   render() {
     const { cancelEdit } = this.props;

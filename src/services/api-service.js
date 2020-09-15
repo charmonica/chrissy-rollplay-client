@@ -48,7 +48,6 @@ const ApiService = {
       )
   },
   editTopic(topic_id, title, topic_desc, rpg_system) {
-    console.log(topic_id)
     return fetch(`${config.API_ENDPOINT}topics/${topic_id}`, {
       method: 'PATCH',
       headers: {
@@ -65,7 +64,6 @@ const ApiService = {
       )
   },
   deleteTopic(topic_id) {
-    console.log(topic_id)
     return fetch(`${config.API_ENDPOINT}topics/${topic_id}`, {
       method: 'DELETE',
       headers: {
@@ -74,7 +72,6 @@ const ApiService = {
     })
   },
   getComments(topic_id) {
-    console.log(topic_id);
     return fetch(`${config.API_ENDPOINT}comments/${topic_id}`, {
       method: 'GET',
       headers: {
@@ -101,7 +98,6 @@ const ApiService = {
       )
   },
   postComment(comment_owner, comment_passphrase, comment_desc, topicId) {
-    console.log('postComment fired');
     return fetch(`${config.API_ENDPOINT}comments/${topicId}`, {
       method: 'POST',
       headers: {
@@ -121,7 +117,6 @@ const ApiService = {
       )
   },
   editComment(comment_id, comment_desc) {
-    console.log(comment_id)
     return fetch(`${config.API_ENDPOINT}comments/${comment_id}`, {
       method: 'PATCH',
       headers: {
@@ -134,7 +129,6 @@ const ApiService = {
     })
   },
   deleteComment(comment_id) {
-    console.log(comment_id, 'delete comment fired')
     return fetch(`${config.API_ENDPOINT}comments/${comment_id}`, {
       method: 'DELETE',
     })
