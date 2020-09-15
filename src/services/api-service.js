@@ -133,9 +133,9 @@ const ApiService = {
       }),
     })
   },
-  deleteComment(comment_id) {
-    console.log(comment_id, 'delete comment fired')
-    return fetch(`${config.API_ENDPOINT}comments/${comment_id}`, {
+  deleteComment(comment_thread) {
+    console.log(comment_thread, 'delete comment fired')
+    return fetch(`${config.API_ENDPOINT}comments/${comment_thread}`, {
       method: 'DELETE',
     })
   },
