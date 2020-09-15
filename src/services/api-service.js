@@ -2,7 +2,7 @@ import config from '../config';
 
 const ApiService = {
   getTopics() {
-    return fetch(`${config.API_ENDPOINT}topics`, {
+    return fetch(`${config.API_ENDPOINT}topics/topics`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json',
