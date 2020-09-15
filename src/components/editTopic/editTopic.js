@@ -27,11 +27,7 @@ class EditTopic extends Component {
     const { topicId, cancelEdit } = this.props;
     event.preventDefault();
     if ( !title && !rpg_system && !topic_desc ) {
-      return (
-        <div className="error">
-          <p>Must edit at least one variable!</p>
-        </div>
-      )
+      throw new Error('Must fill edit at least one field!')
     } else {
     cancelEdit();
     ApiService.editTopic(topicId, title, topic_desc, rpg_system)
