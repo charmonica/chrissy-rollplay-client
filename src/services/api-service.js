@@ -100,18 +100,18 @@ const ApiService = {
           : res.json()
       )
   },
-  postComment(commentOwner, commentPassphrase, commentDesc, commentThread) {
+  postComment(comment_owner, comment_passphrase, comment_desc, topicId) {
     console.log('postComment fired');
-    return fetch(`${config.API_ENDPOINT}comments/${commentThread}`, {
+    return fetch(`${config.API_ENDPOINT}comments/${topicId}`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
       body: JSON.stringify({
-        comment_owner: commentOwner,
-        comment_passphrase: commentPassphrase,
-        comment_desc: commentDesc,
-        comment_thread: commentThread
+        comment_owner: comment_owner,
+        comment_passphrase: comment_passphrase,
+        comment_desc: comment_desc,
+        comment_thread: topicId
       }),
     })
       .then(res =>
