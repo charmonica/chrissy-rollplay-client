@@ -28,7 +28,7 @@ const ApiService = {
       )
   },
   postTopic(title, topic_owner, rpg_system, topic_desc, topic_passphrase) {
-    return fetch(`${config.API_ENDPOINT}topics`, {
+    return fetch(`${config.API_ENDPOINT}topics/topics`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
