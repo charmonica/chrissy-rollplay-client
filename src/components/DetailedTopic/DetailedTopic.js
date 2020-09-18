@@ -87,7 +87,7 @@ class DetailedTopic extends React.Component {
     } else if (commenting === false && editingTopic === true) {
       return (
         <section className="detailed-topic-box">
-          <EditTopic cancelEdit={this.handleCancelEditTopic} topicId={topic_id} title={topicContent.title} rpg_system={topicContent.rpg_system} topic_desc={topicContent} />
+          <EditTopic cancelEdit={this.handleCancelEditTopic} topicId={topic_id} title={topicContent.title} rpg_system={topicContent.rpg_system} topic_desc={topicContent.topicContent} />
         </section>
       )
     } else {
