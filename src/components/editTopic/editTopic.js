@@ -44,9 +44,9 @@ class EditTopic extends Component {
     return (
       <section className="editing-topic">
         <form className="edit-topic-form" onSubmit={this.handleSubmitEditTopic}>
-          <input type="text" name="title" onChange={this.handleChange} placeholder="New Title" required="Required" value = {this.props.title}/>
-          <input type="text" name="rpg_system" onChange={this.handleChange} placeholder="New System" required="Required" value = {this.props.rpg_system} />
-          <textarea name="topic_desc" onChange={this.handleChange} placeholder="New Description" required="Required" value = {this.props.topic_desc} />
+          <input type="text" name="title" onChange={this.handleChange} placeholder="New Title" required="Required" defaultValue = {this.props.title}/>
+          <input type="text" name="rpg_system" onChange={this.handleChange} placeholder="New System" required="Required" defaultValue = {this.props.rpg_system} />
+          <textarea name="topic_desc" onChange={this.handleChange} placeholder="New Description" required="Required" defaultValue = {this.props.topic_desc} />
           <button type="submit">Submit</button>
           <button type="button" onClick={cancelEdit}>Go Back</button>
         </form>
